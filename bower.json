@@ -1,0 +1,24 @@
+{
+  "name": "mean-starter-kit",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wseo88/mean-starter-kit",
+  "authors": [
+    "wseo88 <wseo88@gmail.com>"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "angular-route": "latest",
+    "animate.css": "latest",
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "jquery": "~2.1.4"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
