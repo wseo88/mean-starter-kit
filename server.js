@@ -29,6 +29,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 // set the static files location /public/img will be /img for users
 app.use('/libs', express.static(__dirname + '/bower_components'));
 app.use('/static', express.static(__dirname + '/public'));
+app.use('/views', express.static(__dirname + '/views'));
 
 // routes ==================================================
 var routerMain = require('./routers/index.js')(express);

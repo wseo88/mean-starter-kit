@@ -10,7 +10,7 @@ module.exports = function(express) {
 
     // web routes ==============================================================
     // route to handle all angular requests
-    router.get('*', function(req, res) {
+    router.get('/', function(req, res) {
         res.sendFile(path.join(__dirname, '../views') + '/index.html');
     });
 

@@ -1,0 +1,1 @@
+angular.module('mean-starter-kit-app', ['ngRoute', 'routes', 'MainController']);
