@@ -1,0 +1,20 @@
+{
+  "name": "mean-stack-starter-kit",
+  "version": "0.0.0",
+  "description": "Lightweight starter kit for a Single Page Application with MongoDB, Express.js, AngularJS, Node.js (MEAN)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MEAN"
+  ],
+  "author": "William Seo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.1.7"
+  }
+}
