@@ -4,7 +4,7 @@ angular.module('routes', []).config(['$routeProvider', '$locationProvider', func
 
 		// home page
 		.when('/', {
-			templateUrl: 'views/templates/home.html',
+			templateUrl: 'views/home.html',
 			controller: 'MainController'
 		}).
 		otherwise({

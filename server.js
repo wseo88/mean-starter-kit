@@ -26,21 +26,24 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
 app.use(methodOverride('X-HTTP-Method-Override'));
 
-// set the static files location /public/img will be /img for users
-app.use('/libs', express.static(__dirname + '/bower_components'));
+// set the static files location
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use('/static', express.static(__dirname + '/public'));
 app.use('/views', express.static(__dirname + '/views'));
 
 // routes ==================================================
-var routerMain = require('./routers/index.js')(express);
-var routerAPI = require('./routers/api.js')(express);
+// Default '/'
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + '/views/index.html');
+});
+
+// API routes
+var routerAPI = require('./app/routers/api.js')(express);
 app.use('/api', routerAPI);
-app.use('/', routerMain);
 
 // start app ===============================================
 var server = app.listen(port, function() {
     var host = server.address().address;
     var port = server.address().port;
-
-    console.log('magic is happening at http://%s:%s', host, port);
+    console.log('Your app is running at http://%s:%s', host, port);
 });
